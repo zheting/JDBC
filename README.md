@@ -60,7 +60,7 @@ preparedStatement设置占位符的值，是从1开始。
 
 3.0 批量插入性能高
 
-##事务
+## 事务
 ### 事务的ACID属性
 
 原子性（Atomicity） 原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。
@@ -90,20 +90,30 @@ preparedStatement设置占位符的值，是从1开始。
 
 ## 数据库连接池
 
-####C3P0
+#### C3P0
 
 https://www.mchange.com/projects/c3p0/
 
  https://github.com/swaldman/c3p0
  
-####DBCP
+#### DBCP
 http://commons.apache.org/proper/commons-dbcp/
 
-####druid
+#### druid
 https://druid.apache.org/docs/latest/design/index.html
 https://github.com/apache/druid
 https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
 
+#### HikariCP
 
 #### DbUtils
 http://commons.apache.org/proper/commons-dbutils/
+
+
+## jdbc2 package 手写连接池
+第一步：继承javax.sql.DataSource,提供不关心方法的默认实现
+
+MyDataSourceInterFace extends DataSource
+
+第二步：
+
